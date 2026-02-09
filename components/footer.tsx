@@ -1,86 +1,80 @@
-import React from 'react'
-import { Instagram, Twitter, Facebook } from 'lucide-react'
+'use client'
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background py-16 md:py-20 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
-          {/* Brand */}
+    <footer className="w-full bg-white border-t border-gray-200">
+      {/* Main Footer */}
+      <div className="px-4 md:px-8 py-12 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Help */}
           <div>
-            <h3 className="text-2xl font-light tracking-widest mb-6">LUXE</h3>
-            <p className="text-sm opacity-70 leading-relaxed">
-              Discover timeless elegance and premium craftsmanship in every collection.
-            </p>
-          </div>
-
-          {/* Shop */}
-          <div>
-            <h4 className="text-sm font-light tracking-widest mb-4 opacity-90">SHOP</h4>
-            <ul className="space-y-3 text-sm opacity-70">
-              <li><a href="#" className="hover:opacity-100 transition">Women's</a></li>
-              <li><a href="#" className="hover:opacity-100 transition">Men's</a></li>
-              <li><a href="#" className="hover:opacity-100 transition">Accessories</a></li>
-              <li><a href="#" className="hover:opacity-100 transition">Sale</a></li>
+            <h4 className="text-xs font-bold tracking-wide mb-4">HELP</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#" className="hover:underline">Our Client Advisors are available to assist you by phone at +1 866.VUITTON, or you may also <a href="#" className="hover:underline">chat with us.</a></a></li>
+              <li><a href="#" className="hover:underline">FAQs</a></li>
+              <li><a href="#" className="hover:underline">Product Care</a></li>
+              <li><a href="#" className="hover:underline">Stores</a></li>
             </ul>
           </div>
 
-          {/* About */}
+          {/* Services */}
           <div>
-            <h4 className="text-sm font-light tracking-widest mb-4 opacity-90">ABOUT</h4>
-            <ul className="space-y-3 text-sm opacity-70">
-              <li><a href="#" className="hover:opacity-100 transition">Our Story</a></li>
-              <li><a href="#" className="hover:opacity-100 transition">Craftsmanship</a></li>
-              <li><a href="#" className="hover:opacity-100 transition">Blog</a></li>
-              <li><a href="#" className="hover:opacity-100 transition">Contact</a></li>
+            <h4 className="text-xs font-bold tracking-wide mb-4">SERVICES</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#" className="hover:underline">Repairs</a></li>
+              <li><a href="#" className="hover:underline">Personalization</a></li>
+              <li><a href="#" className="hover:underline">Art of Gifting</a></li>
+              <li><a href="#" className="hover:underline">Download our Apps</a></li>
             </ul>
           </div>
 
-          {/* Customer */}
+          {/* About Louis Vuitton */}
           <div>
-            <h4 className="text-sm font-light tracking-widest mb-4 opacity-90">CUSTOMER CARE</h4>
-            <ul className="space-y-3 text-sm opacity-70">
-              <li><a href="#" className="hover:opacity-100 transition">Shipping Info</a></li>
-              <li><a href="#" className="hover:opacity-100 transition">Returns</a></li>
-              <li><a href="#" className="hover:opacity-100 transition">FAQ</a></li>
-              <li><a href="#" className="hover:opacity-100 transition">Privacy Policy</a></li>
+            <h4 className="text-xs font-bold tracking-wide mb-4">ABOUT LOUIS VUITTON</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#" className="hover:underline">Fashion Shows</a></li>
+              <li><a href="#" className="hover:underline">Arts & Culture</a></li>
+              <li><a href="#" className="hover:underline">La Maison</a></li>
+              <li><a href="#" className="hover:underline">Sustainability</a></li>
+              <li><a href="#" className="hover:underline">Latest News</a></li>
+              <li><a href="#" className="hover:underline">Careers</a></li>
+              <li><a href="#" className="hover:underline">Foundation Louis Vuitton</a></li>
             </ul>
           </div>
-        </div>
 
-        <div className="border-t border-background border-opacity-20 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            {/* Copyright */}
-            <p className="text-sm opacity-50">
-              © 2024 Luxe Boutique. All rights reserved.
-            </p>
-
-            {/* Social */}
-            <div className="flex gap-6">
-              <a href="#" className="opacity-70 hover:opacity-100 transition">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="opacity-70 hover:opacity-100 transition">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="opacity-70 hover:opacity-100 transition">
-                <Facebook size={20} />
-              </a>
-            </div>
-
-            {/* Newsletter */}
-            <div className="flex items-center gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-transparent border-b border-background border-opacity-50 text-sm text-background placeholder-opacity-50 py-2 focus:outline-none focus:border-opacity-100 transition w-48"
-              />
-              <button className="text-sm tracking-widest opacity-70 hover:opacity-100 transition">
-                SUBSCRIBE
-              </button>
+          {/* Email & SMS Sign-up */}
+          <div>
+            <h4 className="text-xs font-bold tracking-wide mb-4">EMAIL & SMS SIGN-UP</h4>
+            <p className="text-sm mb-4"><a href="#" className="hover:underline">Subscribe</a> for exclusive email and SMS updates and receive the latest news from Louis Vuitton, including new arrivals and exclusive collections.</p>
+            <div className="space-y-2">
+              <a href="#" className="hover:underline text-sm">Follow Us</a>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Bottom Footer */}
+      <div className="px-4 md:px-8 py-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs">
+            <div>
+              <p>Ship to: <span className="font-semibold">United States of America</span></p>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              <a href="#" className="hover:underline">Sitemap</a>
+              <a href="#" className="hover:underline">Legal Notices</a>
+              <a href="#" className="hover:underline">Privacy Policy</a>
+              <a href="#" className="hover:underline">California Supply Chains Act</a>
+              <a href="#" className="hover:underline">Your Privacy Choices</a>
+              <a href="#" className="hover:underline">Accessibility</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Louis Vuitton Logo */}
+      <div className="px-4 md:px-8 py-8 text-center border-t border-gray-200">
+        <h2 className="text-xl font-bold tracking-widest">LOUIS VUITTON</h2>
       </div>
     </footer>
   )

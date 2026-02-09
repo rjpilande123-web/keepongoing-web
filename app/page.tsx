@@ -1,18 +1,20 @@
 import { Header } from '@/components/header'
-import { Hero } from '@/components/hero'
-import { Categories } from '@/components/categories'
-import { FeaturedProducts } from '@/components/featured-products'
-import { Services } from '@/components/services'
+import { HeroCampaign } from '@/components/hero-campaign'
+import { ProductsShowcase } from '@/components/products-showcase'
+import { ServicesSection } from '@/components/services-section'
+import { ShopCategories } from '@/components/shop-categories'
+import { LinkSections } from '@/components/link-sections'
 import { Footer } from '@/components/footer'
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-white">
       <Header />
-      <Hero />
-      <Categories />
-      <FeaturedProducts />
-      <Services />
+      <HeroCampaign />
+      <ProductsShowcase />
+      <ServicesSection />
+      <ShopCategories />
+      <LinkSections />
       <Footer />
     </main>
   )

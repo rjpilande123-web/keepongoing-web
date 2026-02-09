@@ -1,44 +1,38 @@
 import React from 'react'
-import { Heart, ShoppingCart, Search, Menu } from 'lucide-react'
+import { Heart, ShoppingCart, Search, Menu, User } from 'lucide-react'
 
 export function Header() {
   return (
-    <header className="border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-6">
+    <header className="border-b border-gray-200 bg-white">
+      <div className="max-w-full px-4 md:px-8 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex-1">
-            <h1 className="text-2xl md:text-3xl font-light tracking-widest text-foreground">
-              LUXE
-            </h1>
+          {/* Left - Menu & Search */}
+          <div className="flex items-center gap-4">
+            <button className="p-1 hover:opacity-60 transition">
+              <Menu size={20} />
+            </button>
+            <button className="text-sm hover:opacity-60 transition hidden md:block">
+              Search
+            </button>
           </div>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-12 flex-1 justify-center text-sm tracking-wide">
-            <a href="#" className="text-foreground hover:opacity-60 transition">
-              SHOP
-            </a>
-            <a href="#" className="text-foreground hover:opacity-60 transition">
-              COLLECTIONS
-            </a>
-            <a href="#" className="text-foreground hover:opacity-60 transition">
-              ABOUT
-            </a>
-          </nav>
+          {/* Center - Logo */}
+          <h1 className="text-xl md:text-2xl font-bold tracking-widest">LOUIS VUITTON</h1>
 
-          {/* Icons */}
-          <div className="flex items-center gap-6 flex-1 justify-end">
-            <button className="text-foreground hover:opacity-60 transition">
-              <Search size={20} />
+          {/* Right - Contact, Icons */}
+          <div className="flex items-center gap-4">
+            <button className="text-xs md:text-sm hover:opacity-60 transition hidden md:block">
+              Contact Us
             </button>
-            <button className="text-foreground hover:opacity-60 transition">
-              <Heart size={20} />
+            <button className="p-1 hover:opacity-60 transition">
+              <Heart size={18} />
             </button>
-            <button className="text-foreground hover:opacity-60 transition">
-              <ShoppingCart size={20} />
+            <button className="p-1 hover:opacity-60 transition">
+              <User size={18} />
             </button>
-            <button className="md:hidden text-foreground hover:opacity-60 transition">
-              <Menu size={20} />
+            <button className="p-1 hover:opacity-60 transition relative">
+              <ShoppingCart size={18} />
+              <span className="absolute -top-1 -right-1 bg-black text-white text-xs rounded-full w-4 h-4 flex items-center justify-center text-[10px]">0</span>
             </button>
           </div>
         </div>
