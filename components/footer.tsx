@@ -10,7 +10,7 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-bold tracking-wide mb-4">HELP</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:underline">Our Client Advisors are available to assist you by phone at +1 866.VUITTON, or you may also <a href="#" className="hover:underline">chat with us.</a></a></li>
+              <li>Our Client Advisors are available to assist you by phone at +1 866.VUITTON, or you may also <a href="#" className="hover:underline">chat with us.</a></li>
               <li><a href="#" className="hover:underline">FAQs</a></li>
               <li><a href="#" className="hover:underline">Product Care</a></li>
               <li><a href="#" className="hover:underline">Stores</a></li>
