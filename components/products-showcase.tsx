@@ -1,55 +1,75 @@
 'use client'
 
 import { Heart } from 'lucide-react'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
-const products = [
-  {
-    id: 1,
-    name: 'Speedy Bandoulière 35',
-    price: '$2,090.00',
-    image: 'bg-gray-300'
-  },
-  {
-    id: 2,
-    name: 'Neverfull MM',
-    price: '$2,170.00',
-    image: 'bg-gray-300'
-  },
-  {
-    id: 3,
-    name: 'Alma BB',
-    price: '$1,940.00',
-    image: 'bg-gray-300'
-  },
-  {
-    id: 4,
-    name: 'Noé',
-    price: '$1,950.00',
-    image: 'bg-gray-300'
-  }
-]
+interface Product {
+  id: string
+  name: string
+  price: string
+  category: string
+  subcategory: string
+  images: string[]
+}
 
 export function ProductsShowcase() {
+  const [products, setProducts] = useState<Product[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    fetch('/data/products.json')
+      .then((res) => res.json())
+      .then((data) => {
+        // Get first 4 products with images
+        const productsWithImages = data
+          .filter((p: Product) => p.images && p.images.length > 0)
+          .slice(0, 4)
+        setProducts(productsWithImages)
+        setLoading(false)
+      })
+      .catch((err) => {
+        console.error('Error loading products:', err)
+        setLoading(false)
+      })
+  }, [])
+
+  if (loading) {
+    return <section className="w-full py-12 px-4 md:px-8 bg-white">Loading...</section>
+  }
+
   return (
     <section className="w-full py-12 px-4 md:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="text-center mb-4">
-          <p className="text-xs text-gray-600 tracking-wide mb-2">WOMEN</p>
-          <h2 className="text-3xl md:text-4xl font-light mb-8">Le Monogram 130th Anniversary</h2>
+          <p className="text-xs text-gray-600 tracking-wide mb-2">K&G COLLECTION</p>
+          <h2 className="text-3xl md:text-4xl font-light mb-8">Trending Styles</h2>
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {products.map((product) => (
-            <div key={product.id} className="space-y-3">
-              <div className={`${product.image} h-80 relative group cursor-pointer`}>
-                <button className="absolute top-3 right-3 bg-white rounded-full p-2 hover:bg-gray-100 transition">
+            <div key={product.id} className="space-y-3 group">
+              <div className="h-80 bg-gray-200 relative overflow-hidden flex items-center justify-center">
+                {product.images && product.images[0] ? (
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={`/products/${product.images[0]}`}
+                      alt={product.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                ) : (
+                  <div className="text-gray-400">No image</div>
+                )}
+                <button className="absolute top-3 right-3 bg-white rounded-full p-2 hover:bg-gray-100 transition shadow-md">
                   <Heart size={20} />
                 </button>
               </div>
               <p className="text-sm font-light">{product.name}</p>
-              <p className="text-sm text-gray-600">{product.price}</p>
+              <p className="text-sm text-gray-600">${product.price}</p>
             </div>
           ))}
         </div>
@@ -57,10 +77,10 @@ export function ProductsShowcase() {
         {/* CTA Buttons */}
         <div className="flex gap-4 justify-center">
           <button className="border-2 border-black px-8 py-2 text-sm hover:bg-black hover:text-white transition">
-            Shop Now
+            Shop All Products
           </button>
           <button className="border-2 border-black px-8 py-2 text-sm hover:bg-black hover:text-white transition">
-            Discover the Speedy
+            View Collection
           </button>
         </div>
       </div>

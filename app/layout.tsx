@@ -8,8 +8,8 @@ const _playfair = Playfair_Display({ subsets: ['latin'] })
 const _inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Luxury Boutique - Premium Fashion & Accessories',
-  description: 'Discover our exclusive collection of luxury fashion, accessories, and lifestyle products',
+  title: 'K&G Golf - Keep On Going Golf Apparel & Accessories',
+  description: 'Shop premium golf apparel, bags, accessories, and more. K&G Keep On Going Golf - elevate your game with style and performance.',
   generator: 'v0.app',
 }
 

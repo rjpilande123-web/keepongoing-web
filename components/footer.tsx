@@ -10,10 +10,10 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-bold tracking-wide mb-4">HELP</h4>
             <ul className="space-y-2 text-sm">
-              <li>Our Client Advisors are available to assist you by phone at +1 866.VUITTON, or you may also <a href="#" className="hover:underline">chat with us.</a></li>
+              <li>Need assistance? Contact us or <a href="#" className="hover:underline">chat with our team.</a></li>
               <li><a href="#" className="hover:underline">FAQs</a></li>
-              <li><a href="#" className="hover:underline">Product Care</a></li>
-              <li><a href="#" className="hover:underline">Stores</a></li>
+              <li><a href="#" className="hover:underline">Care Instructions</a></li>
+              <li><a href="#" className="hover:underline">Find Us</a></li>
             </ul>
           </div>
 
@@ -21,31 +21,28 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-bold tracking-wide mb-4">SERVICES</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:underline">Repairs</a></li>
+              <li><a href="#" className="hover:underline">Customization</a></li>
               <li><a href="#" className="hover:underline">Personalization</a></li>
-              <li><a href="#" className="hover:underline">Art of Gifting</a></li>
-              <li><a href="#" className="hover:underline">Download our Apps</a></li>
+              <li><a href="#" className="hover:underline">Gift Wrapping</a></li>
+              <li><a href="#" className="hover:underline">Mobile App</a></li>
             </ul>
           </div>
 
-          {/* About Louis Vuitton */}
+          {/* About K&G */}
           <div>
-            <h4 className="text-xs font-bold tracking-wide mb-4">ABOUT LOUIS VUITTON</h4>
+            <h4 className="text-xs font-bold tracking-wide mb-4">ABOUT K&G</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:underline">Fashion Shows</a></li>
-              <li><a href="#" className="hover:underline">Arts & Culture</a></li>
-              <li><a href="#" className="hover:underline">La Maison</a></li>
+              <li><a href="/about" className="hover:underline">Our Story</a></li>
               <li><a href="#" className="hover:underline">Sustainability</a></li>
-              <li><a href="#" className="hover:underline">Latest News</a></li>
+              <li><a href="#" className="hover:underline">News</a></li>
               <li><a href="#" className="hover:underline">Careers</a></li>
-              <li><a href="#" className="hover:underline">Foundation Louis Vuitton</a></li>
             </ul>
           </div>
 
           {/* Email & SMS Sign-up */}
           <div>
             <h4 className="text-xs font-bold tracking-wide mb-4">EMAIL & SMS SIGN-UP</h4>
-            <p className="text-sm mb-4"><a href="#" className="hover:underline">Subscribe</a> for exclusive email and SMS updates and receive the latest news from Louis Vuitton, including new arrivals and exclusive collections.</p>
+            <p className="text-sm mb-4"><a href="#" className="hover:underline">Subscribe</a> for exclusive updates and receive the latest news from K&G, including new arrivals and special offers.</p>
             <div className="space-y-2">
               <a href="#" className="hover:underline text-sm">Follow Us</a>
             </div>
